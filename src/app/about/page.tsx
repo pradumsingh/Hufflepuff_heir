@@ -49,32 +49,32 @@ export default function AboutPage() {
         </div>
       ),
     },
-    {
-      icon: <GraduationCap className="text-blue-400 w-6 h-6 drop-shadow-glow" />,
-      title: "Education",
-      content: (
-        <div className="text-white/90 text-base leading-relaxed space-y-3">
-          <div>
-            <h4 className="text-blue-300 font-semibold text-lg">
-              B.Tech · Electronics and Communication
-            </h4>
-            <p className="text-white/70 text-sm italic">
-              AKTU · 2019 – 2023
-            </p>
-            <p>Graduated with distinction, 8.3 CGPA</p>
-          </div>
-          <div>
-            <h4 className="text-blue-300 font-semibold text-lg">
-              High School · PCM
-            </h4>
-            <p className="text-white/70 text-sm italic">
-              K.V. School · 2017 – 2019
-            </p>
-            <p>Scored 88.4% in CBSE Board Exams</p>
-          </div>
-        </div>
-      ),
-    },
+   {
+  icon: <GraduationCap className="text-blue-400 w-6 h-6 drop-shadow-glow" />,
+  title: "Education",
+  content: (
+    <div className="text-white/90 text-base leading-relaxed space-y-3">
+      <div>
+        <h4 className="text-blue-300 font-semibold text-lg">
+          B.Tech · Electronics and Communication Engineering
+        </h4>
+        <p className="text-white/70 text-sm italic">
+          Noida Institute of Engineering and Technology, Greater Noida · Aug 2019 – May 2023
+        </p>
+        <p>Graduated with distinction, </p>
+      </div>
+      <div>
+        <h4 className="text-blue-300 font-semibold text-lg">
+          High School · PCM
+        </h4>
+        <p className="text-white/70 text-sm italic">
+          Laxman Public School, Hauz Khas, Delhi · Aug 2017 – May 2019
+        </p>
+      </div>
+    </div>
+  ),
+},
+
     {
       icon: <Code2 className="text-yellow-400 w-6 h-6 drop-shadow-glow" />,
       title: "Tech Stack",
