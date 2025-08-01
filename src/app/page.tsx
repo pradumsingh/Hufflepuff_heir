@@ -97,7 +97,7 @@ export default function Home() {
       <div className="relative z-10 space-y-2">
         <h3 className="text-xl font-bold">Associate Software Engineer</h3>
         <p className="text-sm text-white/70">Capgemini • Mar 2024 – Present</p>
-        <p className="text-sm text-white/90">Shaping telecom infra with Golang microservices & 2K+ session Diameter stack.</p>
+        <p className="text-sm text-white/90">Shaping telecom infra with Golang microservices & 5K+ session Diameter stack.</p>
       </div>
     </motion.div>
 
