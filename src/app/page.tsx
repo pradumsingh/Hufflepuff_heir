@@ -12,51 +12,66 @@ export default function Home() {
       <div className="fixed inset-0 -z-10 w-full h-full top-0 left-0">
         <ParticlesBackground />
       </div>
-     {/* hero section */}
+
+
+
+ {/* hero section */}
 <motion.div
   initial={{ opacity: 0, y: 50 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.7 }}
-  className="text-center w-full min-h-screen py-50 bg-gradient-to-r from-black/10 via-zinc-900 to-blue-900/60"
+  className="relative text-center w-full min-h-screen py-50 bg-gradient-to-r from-black/10 via-zinc-900 to-blue-900/60 overflow-hidden"
 >
-  <motion.h1
-    className="text-4xl sm:text-6xl font-bold tracking-tight"
-    animate={{
-      y: [0, -9, 0],
-      scale: [1, 1.05, 1],
-      transition: {
-        duration: 1.2,
-        ease: "easeInOut",
-      },
-    }}
-  >
-    I Build Systems Where <br />
-    <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-      Networks Meet Code
-    </span>
-  </motion.h1>
+  {/* Background Image Layer */}
+<img
+  src="/telecom.png"
+  alt="Telecom Background"
+  className="mx-auto mt-8 w-[300px] h-[200px] object-contain opacity-90"
+/>
 
-  <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed font-mono">
-    Software Engineer @ Capgemini | Golang, LTE, Diameter, GTP-U, K8s. <br />
-    Backend enthusiast crafting real-time telecom systems. <br />
-    Ex-Full Stack @ Hexaware · PySpark | SQL | Azure. <br />
-    Clean code, sharp protocols, blazing performance.
-  </p>
 
-  <p className="mt-4 text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-    Code. Connect. Scale. Repeat.
-  </p>
-
-  <div className="mt-8 flex justify-center gap-4">
-    <MotionLink
-      href="/projects"
-      whileTap={{ scale: 0.95 }}
-      whileHover={{ scale: 1.05 }}
-      className="relative bg-gradient-to-r from-purple-700 to-cyan-500 hover:from-purple-800 hover:to-cyan-600 text-white font-bold text-xl rounded-2xl px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out overflow-hidden"
+  {/* Content Layer */}
+  <div className="relative z-10 px-4">
+    <motion.h1
+      className="text-4xl sm:text-6xl font-bold tracking-tight text-white"
+      animate={{
+        y: [0, -9, 0],
+        scale: [1, 1.05, 1],
+        transition: {
+          duration: 1.2,
+          ease: "easeInOut",
+          repeat: Infinity,
+        },
+      }}
     >
-      <span className="relative z-10">Explore My Work</span>
-      <span className="absolute inset-0 rounded-2xl border-[3px] border-transparent pointer-events-none animate-borderMagic"></span>
-    </MotionLink>
+      I Build Systems Where <br />
+      <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+        Networks Meet Code
+      </span>
+    </motion.h1>
+
+    <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed font-mono">
+      Software Engineer @ Capgemini | Golang, LTE, Diameter, GTP-U, K8s. <br />
+      Backend enthusiast crafting real-time telecom systems. <br />
+      Ex-Full Stack @ Hexaware · PySpark | SQL | Azure. <br />
+      Clean code, sharp protocols, blazing performance.
+    </p>
+
+    <p className="mt-4 text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+      Code. Connect. Scale. Repeat.
+    </p>
+
+    <div className="mt-8 flex justify-center gap-4">
+      <MotionLink
+        href="/projects"
+        whileTap={{ scale: 0.95 }}
+        whileHover={{ scale: 1.05 }}
+        className="relative bg-gradient-to-r from-purple-700 to-cyan-500 hover:from-purple-800 hover:to-cyan-600 text-white font-bold text-xl rounded-2xl px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out overflow-hidden"
+      >
+        <span className="relative z-10">Explore My Work</span>
+        <span className="absolute inset-0 rounded-2xl border-[3px] border-transparent pointer-events-none animate-borderMagic"></span>
+      </MotionLink>
+    </div>
   </div>
 </motion.div>
 
@@ -133,7 +148,7 @@ export default function Home() {
 
 
 
-      {/* projects preview section */}
+  {/* projects preview section */}
 
 <section className="mt-32 max-w-7xl mx-auto px-6 text-white">
   <motion.h2
@@ -213,7 +228,7 @@ export default function Home() {
 </section>
 
 
-      {/* tech stack section */}
+  {/* tech stack section */}
 <section className="max-w-7xl mx-auto px-6 py-24 text-white">
   <motion.h2
     initial={{ opacity: 0, y: 50 }}
@@ -233,36 +248,45 @@ export default function Home() {
         title: "Frontend",
         color: "from-cyan-400 to-blue-500",
         icons: [
-          { src: "/tech-icons/react.svg", label: "React" },
-          { src: "/tech-icons/nextjs.svg", label: "Next.js" },
-          { src: "/tech-icons/tailwindcss.svg", label: "Tailwind CSS" },
+  
+          { src: "/tech-icons/html5.svg", label: "html5" },
+         { src: "/tech-icons/css3.svg", label: "CSS3" },
+         { src: "/tech-icons/tailwindcss.svg", label: "Tailwind CSS" },
+          { src: "/tech-icons/javascript.svg", label: "JavaScript" },
+           { src: "/tech-icons/react.svg", label: "React" },
+      
         ],
       },
       {
         title: "Backend",
         color: "from-purple-400 to-fuchsia-600",
         icons: [
-          { src: "/tech-icons/nodejs.svg", label: "Node.js" },
-          { src: "/tech-icons/go.svg", label: "Golang" },
-          { src: "/tech-icons/grpc.svg", label: "gRPC" },
+       
+            { src: "/tech-icons/go.svg", label: "GO" },
+               { src: "/tech-icons/nodejs.svg", label: "Node.js" },
+           { src: "/tech-icons/express.svg", label: "Express.js" },
+
         ],
       },
       {
-        title: "Languages",
+        title: "Database",
         color: "from-orange-400 to-pink-500",
         icons: [
-          { src: "/tech-icons/python.svg", label: "Python" },
-          { src: "/tech-icons/javascript.svg", label: "JavaScript" },
-          { src: "/tech-icons/cpp.svg", label: "C/C++" },
+       
+          { src: "/tech-icons/mysql.svg", label: "MySQL" },
+          { src: "/tech-icons/mongodb.svg", label: "MongoDB" },
         ],
       },
       {
         title: "Tools & Platforms",
         color: "from-green-400 to-emerald-600",
         icons: [
-          { src: "/tech-icons/aws.svg", label: "AWS" },
+          { src: "/tech-icons/docker.svg", label: "Docker" },
+          { src: "/tech-icons/kubernetes.svg", label: "Kubernetes" },
+          { src: "/tech-icons/azure.svg", label: "Azure" },
           { src: "/tech-icons/git.svg", label: "Git" },
-          { src: "/tech-icons/mysql.svg", label: "MySQL" },
+          { src: "/tech-icons/gitlab.svg", label: "Gitlab" },
+          { src: "/tech-icons/github.svg", label: "Github" },
         ],
       },
     ].map(({ title, color, icons }) => (
