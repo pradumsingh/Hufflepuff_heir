@@ -78,7 +78,7 @@ export default function App() {
       icons: [
         { src: "/tech-icons/docker.svg", label: "Docker" },
         { src: "/tech-icons/kubernetes.svg", label: "Kubernetes" },
-        { src: "/tech-icons/azure.svg", label: "Azure" },
+        { src: "/tech-icons/aws.svg", label: "AWS" },
         { src: "/tech-icons/git.svg", label: "Git" },
         { src: "/tech-icons/gitlab.svg", label: "Gitlab" },
         { src: "/tech-icons/github.svg", label: "Github" },
@@ -174,37 +174,8 @@ export default function App() {
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
   
-  {/* Experience Card 1 - VinGC */}
-  <div className="group relative bg-gradient-to-br from-[#0f172a] to-[#1e293b] p-8 rounded-3xl border border-zinc-700 hover:border-blue-500 transition duration-300 hover:scale-[1.03] shadow-xl hover:shadow-blue-500/30 backdrop-blur-md">
-    <div className="absolute -top-5 -left-5 w-16 h-16 bg-blue-500/30 blur-2xl rounded-full group-hover:scale-110 transition" />
-    <h3 className="text-3xl font-bold text-blue-400 group-hover:text-blue-300 transition">
-      Software Engineer Intern – VinGC (5G/4G MME Team)
-    </h3>
-    <p className="text-sm text-zinc-400 mt-1 italic">May 2024 – Present • Remote</p>
-    <ul className="mt-6 space-y-3 text-zinc-200 text-[16px] leading-relaxed tracking-wide">
-      <li>🛰️ Built 5G/4G MME simulator in Golang with custom Diameter protocol handling (CLR, ISD, AVP).</li>
-      <li>⚙️ Engineered JSON-based UE session automation with <span className="text-blue-400 font-medium">sub-500ms</span> latency response.</li>
-      <li>📦 Orchestrated containerized infra with Docker, Jenkins, and K8s on Linux.</li>
-      <li className="text-zinc-400 text-sm pt-2">🛠 Tools: Golang, Wireshark, Git, Jenkins, K8s</li>
-    </ul>
-  </div>
 
-  {/* Experience Card 2 - Data Engineering Intern */}
-  <div className="group relative bg-gradient-to-br from-[#0f172a] to-[#1e293b] p-8 rounded-3xl border border-zinc-700 hover:border-green-400 transition duration-300 hover:scale-[1.03] shadow-xl hover:shadow-green-400/30 backdrop-blur-md">
-    <div className="absolute -top-5 -right-5 w-16 h-16 bg-green-500/30 blur-2xl rounded-full group-hover:scale-110 transition" />
-    <h3 className="text-3xl font-bold text-green-400 group-hover:text-green-300 transition">
-      Data Engineering Intern
-    </h3>
-    <p className="text-sm text-zinc-400 mt-1 italic">Jan 2024 – Apr 2024 • Remote</p>
-    <ul className="mt-6 space-y-3 text-zinc-200 text-[16px] leading-relaxed tracking-wide">
-      <li>🚀 Developed scalable ETL pipelines in PySpark for multi-million row datasets.</li>
-      <li>🔗 Integrated Azure Blob Storage & Data Factory with performance-tuned Delta Lake.</li>
-      <li>📊 Built real-time analytics dashboards in Power BI to drive product insights.</li>
-      <li className="text-zinc-400 text-sm pt-2">🛠 Tools: PySpark, Azure, SQL, Power BI</li>
-    </ul>
-  </div>
-
-  {/* Experience Card 3 - Capgemini */}
+    {/* Experience Card 1 - Capgemini */}
   <div className="group relative bg-gradient-to-br from-[#0f172a] to-[#1e293b] p-8 rounded-3xl border border-zinc-700 hover:border-yellow-400 transition duration-300 hover:scale-[1.03] shadow-xl hover:shadow-yellow-400/30 backdrop-blur-md lg:col-span-2">
     <div className="absolute -top-5 -left-5 w-16 h-16 bg-yellow-500/30 blur-2xl rounded-full group-hover:scale-110 transition" />
     <h3 className="text-3xl font-bold text-yellow-400 group-hover:text-yellow-300 transition">
@@ -220,6 +191,40 @@ export default function App() {
       <li className="text-zinc-400 text-sm pt-2">🛠 Tools: Golang, K8s, Jenkins, Wireshark</li>
     </ul>
   </div>
+
+
+{/* Experience Card - capGemini Engineering */}
+<div className="group relative bg-gradient-to-br from-[#0f172a] to-[#1e293b] p-8 rounded-3xl border border-zinc-700 hover:border-blue-500 transition duration-300 hover:scale-[1.03] shadow-xl hover:shadow-blue-500/30 backdrop-blur-md">
+  <div className="absolute -top-5 -left-5 w-16 h-16 bg-blue-500/30 blur-2xl rounded-full group-hover:scale-110 transition" />
+  <h3 className="text-3xl font-bold text-blue-400 group-hover:text-blue-300 transition">
+    Software Engineer Intern – Capgemini Engineering
+  </h3>
+  <p className="text-sm text-zinc-400 mt-1 italic">Gurgaon, Haryana • [Your Timeframe]</p>
+  <ul className="mt-6 space-y-3 text-zinc-200 text-[16px] leading-relaxed tracking-wide">
+    <li>🧩 Developed 5+ production-ready components with clean, modular, and scalable code.</li>
+    <li>⚡ Ensured optimized metrics, performance, and maintainability across all features.</li>
+    <li>⏱️ Delivered consistently within tight deadlines and strict project milestones.</li>
+    <li className="text-zinc-400 text-sm pt-2">🛠 Tools: [Add your tech stack used here]</li>
+  </ul>
+</div>
+
+
+
+<div className="group relative bg-gradient-to-br from-[#0f172a] to-[#1e293b] p-8 rounded-3xl border border-zinc-700 hover:border-green-400 transition duration-300 hover:scale-[1.03] shadow-xl hover:shadow-green-400/30 backdrop-blur-md">
+  <div className="absolute -top-5 -right-5 w-16 h-16 bg-green-500/30 blur-2xl rounded-full group-hover:scale-110 transition" />
+  <h3 className="text-3xl font-bold text-green-400 group-hover:text-green-300 transition">
+    Software Engineer Trainee
+  </h3>
+  <p className="text-sm text-zinc-400 mt-1 italic">Nov 2023 – Feb 2024 • Remote</p>
+  <ul className="mt-6 space-y-3 text-zinc-200 text-[16px] leading-relaxed tracking-wide">
+    <li>💻 Showcased full-stack skills by building robust apps using Python, SQL Server, and PyUnit.</li>
+    <li>⚙️ Optimized large-scale data processing using PySpark on Azure Databricks.</li>
+    <li>☁️ Contributed to seamless cloud data integration with modern architecture practices.</li>
+    <li className="text-zinc-400 text-sm pt-2">🛠 Tools: Python, SQL Server, PySpark, Azure Databricks, PyUnit</li>
+  </ul>
+</div>
+
+
 
 </div>
 
