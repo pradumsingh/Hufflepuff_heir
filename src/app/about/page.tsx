@@ -5,61 +5,8 @@ import {
   GraduationCap,
   Code2,
 } from "lucide-react";
-import { useEffect, useRef } from "react";
 
 export default function AboutPage() {
-  const canvasRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    let stars = [];
-
-    const createStars = () => {
-      stars = Array.from({ length: 150 }, () => ({
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        r: Math.random() * 1.5,
-        alpha: Math.random(),
-      }));
-    };
-
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      stars.forEach((star) => {
-        ctx.beginPath();
-        ctx.globalAlpha = star.alpha;
-        ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
-        ctx.fillStyle = "white";
-        ctx.fill();
-      });
-    };
-
-    const animate = () => {
-      stars.forEach((star) => {
-        star.y += 0.3;
-        if (star.y > window.innerHeight) {
-          star.y = 0;
-          star.x = Math.random() * window.innerWidth;
-        }
-      });
-      draw();
-      requestAnimationFrame(animate);
-    };
-
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      createStars();
-    };
-
-    resize();
-    window.addEventListener("resize", resize);
-    animate();
-
-    return () => window.removeEventListener("resize", resize);
-  }, []);
-
   const cards = [
     {
       icon: <Briefcase className="text-green-400 w-6 h-6 drop-shadow-glow" />,
@@ -145,12 +92,7 @@ export default function AboutPage() {
 
   return (
     <main className="relative w-screen min-h-screen text-white font-sans overflow-x-hidden overflow-y-auto">
-      {/* Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 z-0"
-        style={{ width: "100%", height: "100%", background: "black" }}
-      />
+      {/* Background gradient only (no canvas) */}
       <div className="fixed inset-0 z-0 bg-gradient-to-br from-black/80 via-indigo-900/70 to-blue-900/80" />
 
       {/* Content */}

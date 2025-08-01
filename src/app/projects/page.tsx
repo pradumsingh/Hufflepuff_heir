@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { Code, ExternalLink } from "lucide-react";
-import { useEffect, useRef } from "react";
 
 const projects = [
   {
@@ -34,65 +33,8 @@ const projects = [
 ];
 
 export default function ProjectPage() {
-  const canvasRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    let stars = [];
-
-    const createStars = () => {
-      stars = Array.from({ length: 100 }, () => ({
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        r: Math.random() * 1.5,
-        alpha: Math.random(),
-      }));
-    };
-
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      stars.forEach((star) => {
-        ctx.beginPath();
-        ctx.globalAlpha = star.alpha;
-        ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
-        ctx.fillStyle = "white";
-        ctx.fill();
-      });
-    };
-
-    const animate = () => {
-      stars.forEach((star) => {
-        star.y += 0.3;
-        if (star.y > window.innerHeight) {
-          star.y = 0;
-          star.x = Math.random() * window.innerWidth;
-        }
-      });
-      draw();
-      requestAnimationFrame(animate);
-    };
-
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      createStars();
-    };
-
-    resize();
-    window.addEventListener("resize", resize);
-    animate();
-
-    return () => window.removeEventListener("resize", resize);
-  }, []);
-
   return (
     <main className="relative min-h-screen overflow-hidden text-white">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 z-0"
-        style={{ width: "100%", height: "100%", background: "black" }}
-      />
       <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-indigo-900/60 to-zinc-900/80 z-0" />
       <motion.section
         initial="hidden"
@@ -127,10 +69,8 @@ export default function ProjectPage() {
             transition={{ duration: 0.6, delay: index * 0.2 }}
             className="group mb-20 flex flex-col md:flex-row items-center gap-10 bg-white/5 border border-white/10 rounded-3xl shadow-lg hover:shadow-blue-500/20 p-6 md:p-10 transition-all duration-300 relative overflow-hidden"
           >
-            {/* glow border pulse */}
             <div className="absolute inset-0 z-0 rounded-3xl bg-gradient-to-r from-indigo-500 to-blue-500 opacity-10 group-hover:opacity-30 blur-2xl transition duration-500" />
 
-            {/* Text content */}
             <div className="md:w-1/2 relative z-10">
               <h3 className={`text-3xl font-semibold ${project.color}`}>
                 {project.title}
@@ -148,7 +88,6 @@ export default function ProjectPage() {
               </a>
             </div>
 
-            {/* Image preview */}
             <motion.div className="md:w-1/2 flex justify-center relative z-10">
               <motion.img
                 src={project.image}
