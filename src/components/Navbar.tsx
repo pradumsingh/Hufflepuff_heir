@@ -107,7 +107,7 @@ export const Navbar = () => {
         </div>
 
         <a
-          href="/Akash_Kumar_Resume.pdf"
+          href="/Pradum_Singh_Resume.pdf"
           download
           target="_blank"
           rel="noopener noreferrer"
@@ -149,7 +149,7 @@ export const Navbar = () => {
             </summary>
             <div className="ml-2 mt-2 space-y-1 pl-2 border-l border-blue-500 transition-all">
               <a
-                href="https://github.com/akash-kumar5"
+                href="https://github.com/pradumsingh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:text-blue-300"
@@ -157,7 +157,7 @@ export const Navbar = () => {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/-akash-kumar"
+                href="https://www.linkedin.com/in/pradum-singh-121a061b6/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:text-blue-300"
