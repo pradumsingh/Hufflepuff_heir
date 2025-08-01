@@ -22,7 +22,7 @@ const projects = [
     imageClass: "-rotate-2",
   },
   {
-    title: "MME Simulator - LTE Core",
+    title: "Upcoming Intensive Backend Project",
     description:
       "Worked on telecom LTE MME Node (Golang). Implemented Diameter/UDP interfaces with 2K+ session support, <500ms response time.",
     link: "https://github.com/pradumsingh17",
