@@ -1,6 +1,8 @@
 "use client";
 import { ParticlesBackground } from "@/components/ParticlesBackground";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
 
 import Link from "next/link";
 
@@ -311,7 +313,14 @@ export default function Home() {
                 key={label}
                 className="flex flex-col items-center p-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-lg shadow-md transition"
               >
-                <img src={src} alt={label} className="w-12 h-12 mb-2" />
+                <Image
+  src={src}
+  alt={label}
+  width={48}
+  height={48}
+  className="mb-2"
+/>
+
                 <span className="text-sm font-medium text-white/90">
                   {label}
                 </span>
