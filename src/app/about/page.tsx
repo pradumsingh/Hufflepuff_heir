@@ -59,7 +59,7 @@ export default function AboutPage() {
           B.Tech · Electronics and Communication Engineering
         </h4>
         <p className="text-white/70 text-sm italic">
-          Noida Institute of Engineering and Technology, Greater Noida · Aug 2019 – May 2023
+          NIET, Greater Noida · Aug 2019 – May 2023
         </p>
         <p>Graduated with distinction, </p>
       </div>
