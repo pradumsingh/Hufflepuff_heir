@@ -191,7 +191,7 @@ export default function App() {
     <div className="group relative bg-gradient-to-br from-[#0f172a] to-[#1e293b] p-8 rounded-3xl border border-zinc-700 hover:border-green-400 transition duration-300 hover:scale-[1.03] shadow-xl hover:shadow-green-400/30 backdrop-blur-md">
       <div className="absolute -top-5 -right-5 w-16 h-16 bg-green-500/30 blur-2xl rounded-full group-hover:scale-110 transition" />
       <h3 className="text-3xl font-bold text-green-400 group-hover:text-green-300 transition">
-        Data Engineering Intern – Azure Databricks
+        Data Engineering Intern 
       </h3>
       <p className="text-sm text-zinc-400 mt-1 italic">Jan 2024 – Apr 2024 • Remote</p>
       <ul className="mt-6 space-y-3 text-zinc-200 text-[16px] leading-relaxed tracking-wide">
