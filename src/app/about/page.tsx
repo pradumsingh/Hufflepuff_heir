@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import {
   Briefcase,
-  GraduationCap,
+  // GraduationCap,
   Code2,
 } from "lucide-react";
 
