@@ -15,19 +15,14 @@ export default function Home() {
 
 
 
- {/* hero section */}
+
+{/* hero section */}
 <motion.div
   initial={{ opacity: 0, y: 50 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.7 }}
   className="relative text-center w-full min-h-screen py-50 bg-gradient-to-r from-black/10 via-zinc-900 to-blue-900/60 overflow-hidden"
 >
-  {/* Background Image Layer */}
-<img
-  src="/telecom.png"
-  alt="Telecom Background"
-  className="mx-auto mt-8 w-[300px] h-[200px] object-contain opacity-90"
-/>
 
 
   {/* Content Layer */}
@@ -74,8 +69,6 @@ export default function Home() {
     </div>
   </div>
 </motion.div>
-
-
     
  {/* About Me - Stylish Experience Cards (One-liners) */}
 <section className="mt-20 max-w-7xl mx-auto px-6 text-white">
